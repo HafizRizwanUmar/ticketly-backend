@@ -1,8 +1,8 @@
-// api/index.js
+// server.js
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-require('dotenv').config(); // Load .env variables
+require('dotenv').config();
 
 const app = express();
 
@@ -36,5 +36,5 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// 🚀 Export the app instead of listening
+// Export for Vercel
 module.exports = app;
